@@ -109,6 +109,14 @@
 
 
 						echo '</div>';
+
+							echo '<div class="col-md-3" data-scrollreveal="enter right after 0s over 1s">';
+
+
+							echo '<a href="" class="btn btn-primary custom-button red-btn zerif_hidden_if_not_customizer"></a>';
+
+
+						echo '</div>';
 						
 					endif;
 

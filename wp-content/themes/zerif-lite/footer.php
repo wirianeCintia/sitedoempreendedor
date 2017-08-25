@@ -3,7 +3,6 @@
  * The template for displaying the footer.
  * Contains the closing of the #content div and all content after
  */
-
 ?>
 
 </div><!-- .site-content -->
@@ -14,13 +13,12 @@
 
 	<?php zerif_footer_widgets_trigger(); ?>
 
-	<div class="container-footer">
+	<div class="container">
 
 		<?php zerif_top_footer_trigger(); ?>
 
 		<?php
 			$footer_sections = 0;
-
 			if ( current_user_can( 'edit_theme_options' ) ) {
 				$zerif_address = get_theme_mod( 'zerif_address',sprintf( '<a href="%1$s">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=zerif_address' ) ), __( 'Company address','zerif-lite' ) ) );
 				$zerif_address_icon = get_theme_mod( 'zerif_address_icon', get_template_directory_uri().'/images/map25-redish.png' );
@@ -28,7 +26,6 @@
 				$zerif_address = get_theme_mod( 'zerif_address' );
 				$zerif_address_icon = get_theme_mod( 'zerif_address_icon' );
 			}
-
 			if ( current_user_can( 'edit_theme_options' ) ) {
 				$zerif_email = get_theme_mod( 'zerif_email',sprintf( '<a href="%1$s">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=zerif_email' ) ), __( 'youremail@site.com','zerif-lite' ) ) );
 				$zerif_email_icon = get_theme_mod( 'zerif_email_icon', get_template_directory_uri().'/images/envelope4-green.png' );
@@ -36,7 +33,6 @@
 				$zerif_email = get_theme_mod( 'zerif_email' );
 				$zerif_email_icon = get_theme_mod( 'zerif_email_icon' );
 			}
-
 			if ( current_user_can( 'edit_theme_options' ) ) {
 				$zerif_phone = get_theme_mod( 'zerif_phone',sprintf( '<a href="%1$s">%2$s</a>', esc_url( admin_url( 'customize.php?autofocus&#91;control&#93;=zerif_phone' ) ), __( '0 332 548 954','zerif-lite' ) ) );
 				$zerif_phone_icon = get_theme_mod( 'zerif_phone_icon', get_template_directory_uri().'/images/telephone65-blue.png' );
@@ -45,26 +41,22 @@
 				$zerif_phone_icon = get_theme_mod( 'zerif_phone_icon' );
 			}
 
+
 			$zerif_socials_facebook = get_theme_mod( 'zerif_socials_facebook' );
 			$zerif_socials_twitter = get_theme_mod( 'zerif_socials_twitter' );
 			$zerif_socials_linkedin = get_theme_mod( 'zerif_socials_linkedin' );
 			$zerif_socials_behance = get_theme_mod( 'zerif_socials_behance' );
 			$zerif_socials_dribbble = get_theme_mod( 'zerif_socials_dribbble' );
 			$zerif_socials_instagram = get_theme_mod( 'zerif_socials_instagram' );
-
 			$zerif_accessibility = get_theme_mod('zerif_accessibility');
 			$zerif_copyright = get_theme_mod('zerif_copyright');
-
 			$zerif_powered_by = true;
-
 			if( ! empty( $zerif_address ) || ! empty( $zerif_address_icon ) ) {
 				$footer_sections ++;
 			}
-
 			if( ! empty( $zerif_email ) || ! empty( $zerif_email_icon ) ) {
 				$footer_sections ++;
 			}
-
 			if( ! empty( $zerif_phone ) || ! empty( $zerif_phone_icon ) ) {
 				$footer_sections ++;
 			}
@@ -72,7 +64,6 @@
 			! empty( $zerif_copyright ) || ! empty( $zerif_powered_by ) || ! empty( $zerif_socials_instagram ) ) {
 				$footer_sections ++;
 			}
-
 			if( $footer_sections == 1 ) {
 				$footer_class = 'col-md-12';
 			} elseif( $footer_sections == 2 ) {
@@ -84,20 +75,12 @@
 			} else {
 				$footer_class = 'col-md-3';
 			}
-
 			if( ! empty( $footer_class ) ) {
-
 				/* COMPANY ADDRESS */
 				if( ! empty( $zerif_address_icon ) || ! empty( $zerif_address ) ) {
 					echo '<div class="'.$footer_class.' company-details">';
-
-						if( ! empty( $zerif_address_icon ) ) {
-							echo '<div class="icon-top red-text">';
-								 echo '<img src="'.esc_url( $zerif_address_icon ).'" alt="" />';
-							echo '</div>';
-						}
-
-						if( ! empty( $zerif_address ) ) {
+						
+							if( ! empty( $zerif_address ) ) {
 							echo '<div class="zerif-footer-address">';
 								echo wp_kses_post( $zerif_address );
 							echo '</div>';
@@ -105,18 +88,78 @@
 							echo '<div class="zerif-footer-address zerif_hidden_if_not_customizer"></div>';
 						}
 
+						if( ! empty( $zerif_address_icon ) ) {
+							echo '<a href="/sitedoempreendedor-nexti/empretec/">
+';echo '<div class="icon-top red-text">';
+								 echo '<img src="'.esc_url( $zerif_address_icon ).'" alt="" />';
+								 echo '</a>';
+							echo '</div>';
+						}
+					
+					echo '</div>';
+				}
+				/* COMPANY EMAIL */
+
+				if( ! empty( $zerif_email_icon) || ! empty( $zerif_email) ) {
+					echo '<div class="'.$footer_class.' company-details">';
+					    if( ! empty( $zerif_email) ) {
+							echo '<div class="zerif-footer-email">';
+								echo wp_kses_post( $zerif_email );
+							echo '</div>';
+						} else if( is_customize_preview() ) {
+							echo '<div class="zerif-footer-email zerif_hidden_if_not_customizer"></div>';
+						}
+
+						if( ! empty( $zerif_email_icon) ) {
+							echo '<div class="icon-top green-text">';
+								echo '<img src="'.esc_url($zerif_email_icon).'" alt="" />';
+							echo '</div>';
+						}
+						
+					echo '</div>';
+				}
+				/* COMPANY PHONE NUMBER */
+
+				
+
+				if( ! empty( $zerif_phone_icon ) || ! empty( $zerif_phone ) ) {
+					echo '<div class="'.$footer_class.' company-details">';
+						if( ! empty( $zerif_phone_icon ) ) {
+							echo '<div class="icon-top blue-text">';
+								echo '<img src="'.esc_url( $zerif_phone_icon ).'" alt="" />';
+							echo '</div>';
+						}
+						if( ! empty( $zerif_phone ) ) {
+							echo '<div class="zerif-footer-phone">';
+								echo wp_kses_post( $zerif_phone );
+							echo '</div>';
+						} else if( is_customize_preview() ) {
+							echo '<div class="zerif-footer-phone zerif_hidden_if_not_customizer"></div>';
+						}
 					echo '</div>';
 				}
 
-				/* COMPANY EMAIL */
 
-				/* COMPANY PHONE NUMBER */
-			
+					echo '<div class="'.$footer_class.' company-details">';
+						echo '<h6 style="color:#939393;">CONTATO</h6>';
+							//echo '</div>';
+						echo '<h6 style="color:#939393;"> &#9993 contato@sitedoempreendedor</h6>';
+							//echo '</div>';
+						echo '<h6 style="color:#939393;"> &#9990 +55 55 5555-5555</h6>';
+							//echo '</div>';
+					    
+
+							
+					echo '</div>';
+				
+
+
 			}
-
 			// open link in a new tab when checkbox "accessibility" is not ticked
 			$attribut_new_tab = (isset($zerif_accessibility) && ($zerif_accessibility != 1) ? ' target="_blank"' : '' );
 
+				
+		
 		?>
 		<?php zerif_bottom_footer_trigger(); ?>
 	</div> <!-- / END CONTAINER -->
@@ -133,7 +176,6 @@
  *  Fix for sections with widgets not appearing anymore after the hide button is selected for each section
  * */
 if ( is_customize_preview() ) {
-
 	if ( is_active_sidebar( 'sidebar-ourfocus' ) ) {
 		echo '<div class="zerif_hidden_if_not_customizer">';
 			dynamic_sidebar( 'sidebar-ourfocus' );
@@ -155,7 +197,6 @@ if ( is_customize_preview() ) {
 		echo '</div>';
 	}
 }
-
 ?>
 
 <?php wp_footer(); ?>
@@ -165,3 +206,11 @@ if ( is_customize_preview() ) {
 </body>
 
 </html>
+
+
+
+
+
+
+
+

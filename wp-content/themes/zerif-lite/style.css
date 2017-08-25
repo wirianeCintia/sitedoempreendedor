@@ -146,7 +146,7 @@ ul, ol {
 	color: #FFF;
 }
 a {
-	color: #e96656;
+	color: white;
 	-webkit-transition: all 700ms;
 	transition: all 700ms;
 }
@@ -316,13 +316,12 @@ h6 {
 	text-transform: uppercase;
 	padding: 20px 40px 20px 40px;
 	border-radius: 4px;
-	margin: 40px;
+	margin: 70px;
 	border: none;
-	margin-left: 10em;
-	margin-right: 10em;
 }
 .red-btn {
 	background: yellow;
+
 }
 .green-btn {
 	background: yellow;
@@ -344,11 +343,11 @@ h6 {
 }
 .red-btn:hover {
 	color: #FFF;
-	background: #cb4332;
+	background: #a8a303;
 }
 .green-btn:hover {
 	color: #FFF;
-	background: #069059;
+	background: #a8a303;
 }
 .yellow-btn:hover {
 	color: #FFF;
@@ -2744,6 +2743,7 @@ thead th{
 	margin: auto;
 	margin-bottom: 30px;
 	z-index: 5;
+	-webkit-backface-visibility: hidden;
 	overflow: hidden;
 	border-radius: 4px;
 }
@@ -3076,8 +3076,8 @@ thead th{
  }
 
  .container-footer {
- 	height: 170px;
- 	width: 1200px;
+ 	height: 200px;
+ 	width: 600px;
  }
  .company-details {
  	color: #939393;
@@ -3120,7 +3120,7 @@ thead th{
  	color: #939393;
  }
  .footer-widget-wrap > .container {
- 	text-align: center;
+ 	text-align:center;
  }
  .footer-widget {
  	float: none;
@@ -3133,7 +3133,7 @@ thead th{
  }
  .footer-widget li {
  	list-style: none;
- 	margin-left: 0;
+ 	margin-left: 100px;
  }
  .footer-widget-wrap {
  	background: rgba(255,255,255,0.05);

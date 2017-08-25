@@ -44,7 +44,7 @@
     content: "";
     left: 25px;
     opacity: 0;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .zerif-moreinfo-icon:hover {
