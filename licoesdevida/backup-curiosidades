@@ -1,0 +1,42 @@
+<?php
+if ( is_user_logged_in() ){
+	echo "<p><u style='text-align: right'><a href='http://localhost:81/sitedoempreendedor-nexti/add-curiosidades/'>Add Curiosidades</a></u></p><br><br><br>";
+      
+}
+
+$pag =$_GET['pag']; 
+	if($pag == null){
+		$pag = 1;
+	}
+	$ate = ($pag-1)*10;
+	global $wpdb;
+	$sql = 'SELECT frase FROM se_curiosidades  LIMIT '. $ate .', 1';
+		$col = $wpdb->get_col( $sql, 0); 
+
+	$tam = count($col)-1;
+	for($i = 0; $i<$tam;$i++){
+		$r = $i+$ate;
+		$sqlT = 'SELECT frase FROM se_curiosidades ORDER BY id DESC LIMIT '. $r .', 1';
+		$t = $wpdb->get_col( $sqlT, 0);  
+		echo "<p style='text-align:justify'><b>* $t[0]</b></p>";
+		echo "<br>";
+	}
+
+echo "<br>";
+
+if($pag>0){
+		$next = $pag+1;
+		echo "<a href='http://localhost:81/sitedoempreendedor-nexti/curiosidades/?pag=$next'><b>|Próximo|</b></a>";
+
+}else if($pag>1){
+$back= $pag-1;
+		echo "<a href='http://localhost:81/sitedoempreendedor-nexti/curiosidades/?pag=$back'><b>|Anterior|&nbsp;&nbsp;&nbsp;</b></a>";
+
+}
+
+	if(count($col)==5){
+		echo "<br>";
+	}else{
+		echo "";
+	}
+?>
