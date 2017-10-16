@@ -93,8 +93,8 @@
 
 /* Entry Content */
 .testimonial-entry-content {
-	margin: 0.75em 0;
-	padding: 0;
+	margin: 10px;
+	padding: 10px;
 }
 
 .testimonial-entry-content > :last-child {

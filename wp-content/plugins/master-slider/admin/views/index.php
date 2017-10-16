@@ -14,6 +14,8 @@
  $slider_id = isset( $_REQUEST['slider_id'] ) ? $_REQUEST['slider_id'] : '';
  $do        = isset( $_REQUEST['action'] ) ? $_REQUEST['action'] : '';
 
+ 
+
 
 function msp_thankyou_footer() {
 

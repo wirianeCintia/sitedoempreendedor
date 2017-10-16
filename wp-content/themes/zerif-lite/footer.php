@@ -41,7 +41,6 @@
 				$zerif_phone_icon = get_theme_mod( 'zerif_phone_icon' );
 			}
 
-
 			$zerif_socials_facebook = get_theme_mod( 'zerif_socials_facebook' );
 			$zerif_socials_twitter = get_theme_mod( 'zerif_socials_twitter' );
 			$zerif_socials_linkedin = get_theme_mod( 'zerif_socials_linkedin' );
@@ -65,21 +64,24 @@
 				$footer_sections ++;
 			}
 			if( $footer_sections == 1 ) {
-				$footer_class = 'col-md-12';
+				$footer_class = 'col-md-4';
 			} elseif( $footer_sections == 2 ) {
-				$footer_class = 'col-md-6';
+				$footer_class = 'col-md-4';
 			} elseif( $footer_sections == 3 ) {
 				$footer_class = 'col-md-4';
 			} elseif( $footer_sections == 4 ) {
-				$footer_class = 'col-md-3';
+				$footer_class = 'col-md-4';
 			} else {
-				$footer_class = 'col-md-3';
+				$footer_class = 'col-md-4' ;
 			}
 			if( ! empty( $footer_class ) ) {
+
+							//echo '</div>';						
 				/* COMPANY ADDRESS */
+				echo '<div class= "row">';
 				if( ! empty( $zerif_address_icon ) || ! empty( $zerif_address ) ) {
 					echo '<div class="'.$footer_class.' company-details">';
-						
+
 							if( ! empty( $zerif_address ) ) {
 							echo '<div class="zerif-footer-address">';
 								echo wp_kses_post( $zerif_address );
@@ -89,8 +91,8 @@
 						}
 
 						if( ! empty( $zerif_address_icon ) ) {
-							echo '<a href="/sitedoempreendedor-nexti/empretec/">
-';echo '<div class="icon-top red-text">';
+							echo '<a href="/sitedoempreendedor-nexti/emprentec/">
+'							;echo '<div class="icon-top red-text">';
 								 echo '<img src="'.esc_url( $zerif_address_icon ).'" alt="" />';
 								 echo '</a>';
 							echo '</div>';
@@ -98,9 +100,60 @@
 					
 					echo '</div>';
 				}
-				/* COMPANY EMAIL */
+
+	
+
+
+
+
+                		echo '<div class="'.$footer_class.'company-details">';
+                		
+                		echo '<div class = "col-md-4 centerdados">';
+                		//echo '<div class= "imgnew">';
+				//echo '<div class = "col-md-4">';
+                	
+						echo '<h6 style="color:black;">CONTATO</h6>';
+							//echo '</div>';
+						echo '<h6 style="color:black;"> &#9993 contatos@sitedoempreendedor</h6>';
+							//echo '</div>';
+						echo '<h6 style="color:black;"> &#9990 +55 55 5555-5555</h6>';
+						echo '</div>';		
+					echo '</div>';
+
+
+                /**
+				echo '<div class="'.$footer_class.' company-details">';
+   				echo '<div class = "col-md-4">';
+
+   				echo '<div class = "imgcenter" >';
+				echo '<div class="imgtamanho">';
+
+				echo'<img src=”http://cinpar2017.com/wp-content/uploads/2017/05/logo-nexti-png-e1496260739241.png”/>';
+				echo '</div>';
+				echo '</div>';
+				echo '</div>';
+				echo '</div>'; */
 
 				if( ! empty( $zerif_email_icon) || ! empty( $zerif_email) ) {
+					echo '<div class="'.$footer_class.' company-details">';
+					    if( ! empty( $zerif_email) ) {
+							echo '<div class="zerif-footer-email centralizaletra">';
+								echo wp_kses_post( $zerif_email );
+							echo '</div>';
+						} else if( is_customize_preview() ) {
+							echo '<div class="zerif-footer-email zerif_hidden_if_not_customizer"></div>';
+						}
+
+						if( ! empty( $zerif_email_icon) ) {
+							echo '<div class="icon-top green-text imgtamanho imgcenter">';
+								echo '<img src="http://cinpar2017.com/wp-content/uploads/2017/05/logo-nexti-png-e1496260739241.png"'.esc_url($zerif_email_icon).'" alt="" />';
+							echo '</div>';
+						}
+						
+					echo '</div>';
+				}
+				/* COMPANY PHONE NUMBER */
+				/*if( ! empty( $zerif_email_icon) || ! empty( $zerif_email) ) {
 					echo '<div class="'.$footer_class.' company-details">';
 					    if( ! empty( $zerif_email) ) {
 							echo '<div class="zerif-footer-email">';
@@ -118,43 +171,10 @@
 						
 					echo '</div>';
 				}
-				/* COMPANY PHONE NUMBER */
 
-				
+				 */
+}
 
-				if( ! empty( $zerif_phone_icon ) || ! empty( $zerif_phone ) ) {
-					echo '<div class="'.$footer_class.' company-details">';
-						if( ! empty( $zerif_phone_icon ) ) {
-							echo '<div class="icon-top blue-text">';
-								echo '<img src="'.esc_url( $zerif_phone_icon ).'" alt="" />';
-							echo '</div>';
-						}
-						if( ! empty( $zerif_phone ) ) {
-							echo '<div class="zerif-footer-phone">';
-								echo wp_kses_post( $zerif_phone );
-							echo '</div>';
-						} else if( is_customize_preview() ) {
-							echo '<div class="zerif-footer-phone zerif_hidden_if_not_customizer"></div>';
-						}
-					echo '</div>';
-				}
-
-
-					echo '<div class="'.$footer_class.' company-details">';
-						echo '<h6 style="color:#939393;">CONTATO</h6>';
-							//echo '</div>';
-						echo '<h6 style="color:#939393;"> &#9993 contato@sitedoempreendedor</h6>';
-							//echo '</div>';
-						echo '<h6 style="color:#939393;"> &#9990 +55 55 5555-5555</h6>';
-							//echo '</div>';
-					    
-
-							
-					echo '</div>';
-				
-
-
-			}
 			// open link in a new tab when checkbox "accessibility" is not ticked
 			$attribut_new_tab = (isset($zerif_accessibility) && ($zerif_accessibility != 1) ? ' target="_blank"' : '' );
 
@@ -162,13 +182,13 @@
 		
 		?>
 		<?php zerif_bottom_footer_trigger(); ?>
+
+
 	</div> <!-- / END CONTAINER -->
+
 
 </footer> <!-- / END FOOOTER  -->
 
-<?php zerif_after_footer_trigger(); ?>
-
-	</div><!-- mobile-bg-fix-whole-site -->
 </div><!-- .mobile-bg-fix-wrap -->
 
 <?php

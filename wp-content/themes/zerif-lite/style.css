@@ -2887,17 +2887,18 @@ thead th{
  **   Testimonial           -----
  -----------------------------------------*/
  .testimonial {
- 	background: #8c7620;
- 	padding-bottom: 90px;
+ 	background: yellow;
+ 	padding-top: 30px;
+ 	padding-bottom: 30px;
  }
  .testimonial .section-header .section-legend {
  	color: #FFF;
  }
  #client-feedbacks .feedback-box, .testimonial .widget_zerif_testim-widget {
- 	width: 30%;
+ 	width: 10%;
  	background: #FFFFFF;
- 	padding: 25px;
- 	margin: 13px;
+ 	padding: 10px;
+ 	margin: 10px;
  	text-align: left;
  	border-radius: 4px;
  	-webkit-box-shadow: none;
@@ -2912,13 +2913,13 @@ thead th{
  }
  .feedback-box .client, .testimonial .widget_zerif_testim-widget .client {
  	margin-top: 30px;
- 	height: 73px;
+ 	height: 20px;
  	position: relative;
  }
  .feedback-box .quote, .testimonial .widget_zerif_testim-widget .quote {
  	float: left;
- 	font-size: 45px;
- 	line-height: 80px;
+ 	font-size: 20px;
+ 	line-height: 20px;
  }
  .feedback-box .client-info, .testimonial .widget_zerif_testim-widget .client-info {
  	float: left;
@@ -2930,20 +2931,20 @@ thead th{
  	color: #404040;
  }
  .feedback-box .client-info .client-company, .testimonial .widget_zerif_testim-widget .client-company {
- 	font-size: 13px;
+ 	font-size: 5px;
  	margin-top: -3px;
  }
  .feedback-box .client-image, .testimonial .widget_zerif_testim-widget .client-image {
  	float: right;
- 	width: 73px;
- 	height: 73px;
+ 	width: 20px;
+ 	height: 20px;
  	border-radius: 50%;
  	overflow: hidden;
  	border: 3px solid #f6f6f6;
  }
  .feedback-box .client-image img, .testimonial .widget_zerif_testim-widget .client-image img {
- 	width:100%;
- 	height:100%;
+ 	width:30%;
+ 	height:30%;
  }
  .customNavigation {
  	text-align: center;
@@ -3072,17 +3073,19 @@ thead th{
  -----------------------------------------*/
  #footer {
  	background: white;
- 	line-height: 0px;
+ 	position: absolute;
+    width:100%;
+
  }
 
  .container-footer {
- 	height: 200px;
- 	width: 600px;
+ 	height: auto;
+ 	width: auto;
  }
  .company-details {
- 	color: #939393;
- 	padding-top: 67px;
- 	padding-bottom: 30px;
+ 	color: black;
+ 	padding-top: 40px;
+ 	padding-bottom: 20px;
  }
  .company-details a {
  	color:#939393;
@@ -3526,11 +3529,11 @@ thead th{
  	border-radius:4px;
  	margin: 0 0 35px 0;
  	position: relative;
- 	width: 95%;
+ 	width: auto;
  	float: left;
  }
  .large-container .list-post-top {
- 	min-height: 130px;
+ 	min-height: 100px;
  }
 
  /* woocommerce v2.3.5 */
@@ -4708,7 +4711,7 @@ thead th{
  		/*		min-height: 325px; */
  	}
  	.large-container {
- 		width: 100%;
+ 		width: 70%;
  	}
 
  }
@@ -6014,13 +6017,13 @@ thead th{
  	.purchase-now .button {
  		float: none;
  	}
-
  	/* FOOTER */
  	.container .company-details {
  		padding-top: 40px;
  		width: 33%;
- 	}
+ 		padding-bottom: 40px;
 
+ 	}
  }
 
  @media (max-width: 992px) {
@@ -6051,8 +6054,8 @@ thead th{
  		padding-bottom: 30px;
  	}
  	.focus, .works, .about-us, .features, .packages, .products, .testimonial, .contact-us {
- 		padding-top: 60px;
- 		padding-bottom: 60px;
+ 		padding-top: 10px;
+ 		padding-bottom: 10px;
  	}
  	.header-content-wrap,
  	.blog-header-content-wrap {
@@ -6076,8 +6079,6 @@ thead th{
  	.container .company-details {
  		width: 100%;
  	}
-
-
  }
  @media (max-width: 767px) {
 
@@ -6432,7 +6433,7 @@ thead th{
  	.products,
  	.testimonial,
  	.contact-us {
- 		padding-top: 15px;
+ 		padding-top: 5px;
  	}
  	.focus {
  		padding-bottom: 0;
@@ -6454,6 +6455,7 @@ thead th{
  		-ms-transform: translatex(0px) !important;
  		transform: translatex(0px) !important;
  		opacity: 1 !important;
+ 	
  	}
  	.focus .row .focus-box {
  		width: 23% !important;
@@ -6463,6 +6465,7 @@ thead th{
  		padding: 0 1.5%;
  		margin-bottom: 0;
  	}
+
  	.about-us {
  		padding-bottom: 0;
  	}
@@ -6641,3 +6644,50 @@ thead th{
  	margin-bottom: -34px;
  }
  /* END Nivo slider basic styling */
+
+
+.centralizar {
+	text-align: center !important;
+	margin-bottom:40px; 
+}
+
+.centralizatexto {
+	text-align: center;
+}
+
+.centralizanexti{
+	margin-top: -40px;
+	margin-bottom: 40px;
+}
+
+.anothercontainer{
+    background-color: white;
+    padding: 30px 0 20px;
+    font-size: 11px;
+    color:#5b5b5b;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.imgcenter{
+	margin-left: auto;
+    margin-right: auto;
+	width: 6em;
+}
+
+.imgtamanho{
+	width: 215px;
+}
+
+.centerdados{
+	margin-top: 45px;
+}
+
+.centralizaletra{
+	text-align: center;
+	padding-left: 4em;
+}
+
+.containernovo{
+
+	height: 100px;
+}

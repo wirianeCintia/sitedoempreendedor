@@ -292,17 +292,17 @@
 		display: block;
 	}
 	.company-details {
-		padding-top: 67px;
-		padding-bottom: 30px;  
+		padding-top: 10px;
+		padding-bottom: 10px;  
 	}
 	.copyright {
 		width: auto;
-		padding-top: 72px;
-		padding-bottom: 68px;
+		padding-top: 40px;
+		padding-bottom: 20px;
 	}
 	.company-details {
-		padding-top: 67px;
-		padding-bottom: 30px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 /* page */

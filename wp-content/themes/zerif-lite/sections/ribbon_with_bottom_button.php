@@ -75,7 +75,7 @@
 
 					echo '</div>';
 
-
+				
 				elseif ( is_customize_preview() ):
 				
 					echo '<div data-scrollreveal="enter right after 0s over 1s">';

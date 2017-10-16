@@ -70,7 +70,7 @@ $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 	zerif_before_testimonials_trigger();
 
 		get_template_part( 'sections/testimonials' );
-
+          
 	zerif_after_testimonials_trigger();
 
 	endif;

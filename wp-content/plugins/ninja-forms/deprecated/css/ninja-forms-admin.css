@@ -866,7 +866,7 @@ p.debug-report {
 .branch-4-5.nav-menus-php .item-edit,
 .branch-4-6.nav-menus-php .item-edit,
 .branch-4-7.nav-menus-php .item-edit {
-	visibility: visible;
+	visibility: hidden;
 }
 .branch-4-5.nav-menus-php .item-edit::before,
 .branch-4-6.nav-menus-php .item-edit::before,
