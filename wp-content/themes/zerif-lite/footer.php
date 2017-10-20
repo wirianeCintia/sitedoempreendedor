@@ -145,6 +145,8 @@
 						}
 
 						if( ! empty( $zerif_email_icon) ) {
+							echo '<a href="http://nexti.fapce.edu.br/">
+'							;
 							echo '<div class="icon-top green-text imgtamanho imgcenter">';
 								echo '<img src="http://cinpar2017.com/wp-content/uploads/2017/05/logo-nexti-png-e1496260739241.png"'.esc_url($zerif_email_icon).'" alt="" />';
 							echo '</div>';
