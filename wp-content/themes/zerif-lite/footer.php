@@ -101,11 +101,6 @@
 					echo '</div>';
 				}
 
-	
-
-
-
-
                 		echo '<div class="'.$footer_class.'company-details">';
                 		
                 		echo '<div class = "col-md-4 centerdados">';
@@ -120,20 +115,6 @@
 						echo '</div>';		
 					echo '</div>';
 
-
-                /**
-				echo '<div class="'.$footer_class.' company-details">';
-   				echo '<div class = "col-md-4">';
-
-   				echo '<div class = "imgcenter" >';
-				echo '<div class="imgtamanho">';
-
-				echo'<img src=”http://cinpar2017.com/wp-content/uploads/2017/05/logo-nexti-png-e1496260739241.png”/>';
-				echo '</div>';
-				echo '</div>';
-				echo '</div>';
-				echo '</div>'; */
-
 				if( ! empty( $zerif_email_icon) || ! empty( $zerif_email) ) {
 					echo '<div class="'.$footer_class.' company-details">';
 					    if( ! empty( $zerif_email) ) {
@@ -145,36 +126,13 @@
 						}
 
 						if( ! empty( $zerif_email_icon) ) {
-							echo '<a href="http://nexti.fapce.edu.br/">
-'							;
 							echo '<div class="icon-top green-text imgtamanho imgcenter">';
-								echo '<img src="http://cinpar2017.com/wp-content/uploads/2017/05/logo-nexti-png-e1496260739241.png"'.esc_url($zerif_email_icon).'" alt="" />';
-							echo '</div>';
-						}
-						
-					echo '</div>';
-				}
-				/* COMPANY PHONE NUMBER */
-				/*if( ! empty( $zerif_email_icon) || ! empty( $zerif_email) ) {
-					echo '<div class="'.$footer_class.' company-details">';
-					    if( ! empty( $zerif_email) ) {
-							echo '<div class="zerif-footer-email">';
-								echo wp_kses_post( $zerif_email );
-							echo '</div>';
-						} else if( is_customize_preview() ) {
-							echo '<div class="zerif-footer-email zerif_hidden_if_not_customizer"></div>';
-						}
-
-						if( ! empty( $zerif_email_icon) ) {
-							echo '<div class="icon-top green-text">';
 								echo '<img src="'.esc_url($zerif_email_icon).'" alt="" />';
 							echo '</div>';
 						}
 						
 					echo '</div>';
 				}
-
-				 */
 }
 
 			// open link in a new tab when checkbox "accessibility" is not ticked
